@@ -9,5 +9,9 @@ setup(
         'html5lib'
     ],
     license="MIT",
-
+    entry_points = {
+        "console_scripts": [
+            "gcd-find = gcd.user_interface.cli:main",
+        ]
+    }
 )
