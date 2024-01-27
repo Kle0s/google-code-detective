@@ -1,0 +1,6 @@
+[project]
+name = "google-code-discovery"
+version = "0.0.1"
+dependencies = [
+    "requests",
+]
