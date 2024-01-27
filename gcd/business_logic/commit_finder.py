@@ -5,6 +5,7 @@ from gcd.data_access.commit import Commit
 from gcd.data_access.page_fetcher import PageFetcher
 from gcd.data_access.google_git.json_handler import GoogleGitJsonHandler
 
+
 class CommitFinder:
     __format: str
     __project: str
@@ -16,7 +17,7 @@ class CommitFinder:
         self.__project = project
 
     def __is_bugfix(self, commit: Commit, issue: int) -> bool:
-        results = re.findall("^[Bb][Uu][Gg]\s*[:=]\s*.*?(\d+)$", commit.message, re.IGNORECASE | re.MULTILINE)
+        results = re.findall("^bug\s*[:=]\s*.*?(\d+)$", commit.message, re.IGNORECASE | re.MULTILINE)
         return str(issue) in results
 
     def __get_commit(self, url: str) -> Commit:
