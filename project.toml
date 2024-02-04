@@ -1,6 +1,3 @@
-[project]
-name = "google-code-discovery"
-version = "0.0.1"
-dependencies = [
-    "requests",
-]
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
